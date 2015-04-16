@@ -6,5 +6,12 @@
 #
 
 def odds_and_evens(string, return_odds)
-
+  if string == nil
+    return ""
+  end
+  if return_odds
+    string[1].to_s + odds_and_evens(string[2..-1],true).to_s
+  else
+    string[0].to_s + odds_and_evens(string[2..-1],false).to_s
+  end
 end

@@ -13,6 +13,17 @@
 
 
 def grade(num_books, has_read_books)
+  possible_grades = ["A","B","C","D"]
+  if has_read_books
+    possible_grades.pop
+  end
+  if num_books >= 10
+    possible_grades.pop
+  end
+  if num_books > 20
+    possible_grades.pop
+  end
+  possible_grades.pop
 end
 
 

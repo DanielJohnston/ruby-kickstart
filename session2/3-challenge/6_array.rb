@@ -15,3 +15,16 @@
 # prime_chars? ['a', 'bcd']       # => false
 # prime_chars? ['a', 'b', 'cd']   # => false
 
+def prime_chars?(string_array)
+  how_long = string_array.join.length
+  if how_long <= 1
+    return false
+  end
+  how_long.times do |number|
+    if number >=1 and number < (how_long-1) and how_long%(number+1)==0
+      return false
+    end
+  end
+    true
+end
+  

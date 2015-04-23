@@ -16,5 +16,7 @@
 #
 
 class Person
-
+  def new do |name, age|
+    @name = name
+    @age = age
 end

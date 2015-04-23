@@ -9,5 +9,8 @@
 
 def sum_difference_product
   # your code goes here
-  
+  input_number = gets.split(" ").map{|change_me| change_me.to_i}
+  puts input_number[0] + input_number[1]
+  puts (input_number[0] - input_number[1])
+  puts input_number[0] * input_number[1]
 end

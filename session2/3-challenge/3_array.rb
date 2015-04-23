@@ -6,15 +6,22 @@
 # "".every_other_char         # => ""
 
 class String
-  def every_other_char(input_string)
-    if input_string == ""
-      return ""
-    else
-    input_array = input_string.chars
-    return_array = []
-    input_array.each_with_index {|letter, position| position.even? ? return_array.push(letter) : true }
-    return_array
+  def every_other_char
+    output = ""
+    length.times do |i|
+      if i.even?
+        output += self[i]
+      end
     end
+    output
   end
+
+      
+      
+#    input_array = input_string.chars
+#    return_array = []
+#    input_array.each_with_index {|letter, position| position.even? ? return_array.push(letter) : true }
+#    return_array
+
   
 end
